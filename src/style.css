@@ -1,0 +1,57 @@
+:root{
+  --bg-color: black;
+  --gradient-color: linear-gradient(to right, #009fff, #ec2f4b);
+}
+
+html,
+body { 
+  height: 100%;
+  overflow: hidden;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.outer-ring
+{
+  position: absolute;
+  height: 320px;
+  width: 320px;
+  border-radius: 100%;
+  background: var(--gradient-color);
+  /* aninmation */
+  animation-duration: 5s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+}
+
+.inner-ring,profile-pic
+{
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+}
+
+.profile-pic
+{
+  display: block;
+  align: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  /* background image */
+  background-image: url("sample-pic.png");
+}
+
+@keyframes rotate {
+    0% {transform:rotate(0deg);}
+    25%{transform:rotate(90deg);}
+    50%{transform:rotate(0deg);}
+    75%{transform:rotate(360deg);}
+    100%{transform:rotate(0deg);}
+}
